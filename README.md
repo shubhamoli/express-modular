@@ -5,7 +5,7 @@ A simplified modular structure for all your Node apps (especially for expressJS)
 
 ### Installation
 ```sh
-npm install express-modular
+git clone https://github.com/shubhamoli/express-modular
 ```
 ### Version
 0.0.2
