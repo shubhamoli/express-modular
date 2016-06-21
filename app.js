@@ -19,7 +19,7 @@ app.set('views', config.APP_DIR+'views');
 
 // for prettier HTML output in dev mode
 if (app.get('env') === 'development') {
-  
+
   app.locals.pretty = true;
 
 }
@@ -38,6 +38,5 @@ var routes = require(config.APP_DIR+'controllers/urls')(app);
 
 // Start the app
 http.createServer(app).listen(config.port, function() {
-  console.log('App started');
+  console.log('App started at localhost:'+config.port);
 });
-
