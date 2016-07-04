@@ -1,12 +1,5 @@
-
-
 {
     "_Comment": "Main configuration file for this app",
 
-
-    "MODULES_DIR_GLOBAL": "./bin/node_modules/",
-    "MODULES_DIR_APP": "../../bin/node_modules/",
-    "APP_DIR": "./app/",
-    "APP_NAME": "Express Modular",
     "port":3000
 }

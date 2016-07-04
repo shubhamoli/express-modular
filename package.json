@@ -1,16 +1,20 @@
 {
   "name": "express-modular",
-  "version": "0.0.2",
-  "description": "A simplified modular structure for all your Node apps (especially for expressJS)",
+  "version": "0.0.3",
+  "description": "A simplified modular structure for all your expressJS apps",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies" : {
     "express"    : "latest",
-    "jade"       : "latest",
+    "pug"       : "latest",
     "logger"     : "latest"
-    
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shubhamoli/express-modular"
   },
   "author": "Shubham oli <oli.shubham@gmail.com>",
   "license": "MIT"

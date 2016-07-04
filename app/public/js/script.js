@@ -1,3 +1,2 @@
 
-/* js file for your app */
-
+/* Define your custom JS here */

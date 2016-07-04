@@ -1,42 +1,26 @@
 
-"use strict"
-
-// Include the Node Modules
-var http = require('http');
+var express = require('express');
 var config = require('./app/helpers/config.json');
-var express = require(config.MODULES_DIR_GLOBAL+'express');
 
 
 var app = express();
 
 
-
-
 // Set the view engine
-app.set('view engine','jade');
+app.set('view engine','pug');
 // Where to find the view files
-app.set('views', config.APP_DIR+'views');
+app.set('views', './app/views');
 
-// for prettier HTML output in dev mode
-if (app.get('env') === 'development') {
-
-  app.locals.pretty = true;
-
-}
 
 // Some neccessary Middlewares
+app.use(express.static('./app/public'));
 
-app.use(express.static(config.APP_DIR+'public'));
 
-// Explicitly adding the router middleware
-app.use(express.Router());
+// Pass the Express instance to the urls module
+// see './app/controllers/urls.js' for more
+var controller = require('./app/controllers/urls')(app);
 
-var midwares = require(config.APP_DIR+'middlewares/middleware')(app);
-
-// Pass the Express instance to the routes module
-var routes = require(config.APP_DIR+'controllers/urls')(app);
-
-// Start the app
-http.createServer(app).listen(config.port, function() {
-  console.log('App started at localhost:'+config.port);
+// kick off the server
+app.listen(config.port, function(err){
+  console.log("Application started at http://localhost:"+config.port);
 });

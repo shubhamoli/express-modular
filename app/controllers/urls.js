@@ -1,14 +1,19 @@
+// file will act as a hub for all routings.
 
-"use strict"
 
-// file which act a hub for all routings.
-
-var routes = require('./routes');
+// load your specific routes here
+var myRoute = require('./routes');
 
 
 module.exports = function(app) {
-  
-  // Define routes here
-  app.get('/', routes.index);
-  
-}; 
+
+  "use strict";
+
+  // using your defines routes
+  app.use('/', myRoute);
+  // it may be
+  // app.use('/app', myRoute);
+  // then you have to open http://localhost:3000/app/
+
+
+};
