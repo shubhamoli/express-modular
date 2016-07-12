@@ -5,11 +5,13 @@ A simplified MVC based directory structure for all your expressJS apps.
 
 ### Installation
 ```sh
-git clone https://github.com/shubhamoli/express-modular
+$ git clone https://github.com/shubhamoli/express-modular
+$ npm install
+
 and start hacking :-)
 ```
 ### Version
-0.0.3
+0.0.4
 
 ### License
 MIT
