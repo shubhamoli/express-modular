@@ -1,5 +1,5 @@
 {
-    "_Comment": "Main configuration file for this app",
+    "_Comment": "Main configuration file for this app, you can add your own application level configurations",
 
     "port":3000
 }

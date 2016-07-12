@@ -1,7 +1,7 @@
 # express-modular
 ----
 
-A simplified modular structure for all your expressJS apps.
+A simplified MVC based directory structure for all your expressJS apps.
 
 ### Installation
 ```sh
@@ -20,7 +20,7 @@ MIT
 ### Documentation
 ----
 
-Express-modular is basically a directory structure boilerplate. It can be used to quickly setup a modular directory strucutre without any hassle, thus, saving your quality time to focus on development.
+Express-modular is basically a directory structure boilerplate. It can be used to quickly setup a modular directory strucutre without any hassle, thus, saving your quality time to focus on development only.
 
 express-modular relies on the principles of MVC architecture, so directories are named accordingly.
 

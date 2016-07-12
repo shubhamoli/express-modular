@@ -15,12 +15,15 @@ app.set('views', './app/views');
 // Some neccessary Middlewares
 app.use(express.static('./app/public'));
 
+// loading user defined Middlewares
+var middlewares = require('./app/middlewares/middleware.js')(app);
 
 // Pass the Express instance to the urls module
 // see './app/controllers/urls.js' for more
 var controller = require('./app/controllers/urls')(app);
 
-// kick off the server
+
+// Finally, kick off the server
 app.listen(config.port, function(err){
   console.log("Application started at http://localhost:"+config.port);
 });
